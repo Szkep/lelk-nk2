@@ -1,0 +1,124 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    scroll-behavior: smooth;
+    background-color: rgb(233, 236, 236);
+    max-width: 2560px;
+}
+
+/* Navigation bar --- Navigation bar */
+
+header {
+    overflow: visible;
+    position: sticky;
+}
+
+.nav-bar {
+    overflow: visible;
+    display: flex;
+    justify-content: right;
+    z-index: 1000;
+    margin: 3.5rem 4rem;
+}
+
+.nav-bar ul {
+    overflow: visible;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-bar a {
+    overflow: visible;
+    font-size: 1.35rem;
+    color: black;
+}
+
+.nav-bar a:hover {
+    transform: scale(1.35);
+    transition: 200ms;
+}
+
+.nav-bar a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(247, 194, 202);
+    transform: scaleX(0);
+}
+
+.nav-bar a::after {
+    content: "Katt!";
+    position: absolute;
+    font-size: .6rem;
+    bottom: -.65rem;
+    left: 0;
+    transform: scaleX(0);
+}
+
+.nav-bar a:hover::after {
+    transform:scaleX(1);
+}
+
+.button:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    transition: transform 400ms ease-out;
+}
+
+/* CONTACT SECTION --- CONTACT SECTION --- CONTACT SECTION */
+
+h5 {
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    margin: 8rem auto;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0rem 6rem;
+}
+
+.contact-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.text {
+    color: black;
+}
+
+.icon {
+    margin-bottom: .5rem;
+    width: 15%;
+}
+
+@media screen and (max-width: 1300px) {
+    .nav-bar {
+        display: none;
+        flex-direction: column;
+    }
+
+    section {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .icon {
+        width: 4rem;
+    }
+
+    h5 {
+        margin: 4rem auto;
+    }
+}
